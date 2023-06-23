@@ -9,16 +9,16 @@ public class DisplayContentOfFile{
 	
 	public static void main(String []args){
 		
-		Scanner sc = null;
+		Scanner scan = null;
 		
 		try{
-			//Initialised 'sc' with capable to read a file. 
-			sc = new Scanner(new File("example.txt"));
+			//Initialised 'scan' with capable to read a file. 
+			scan = new Scanner(new File("example.txt"));
 			
 			/*Data in file is read line by line 
 			using while loop til the end of file.*/
-			while(sc.hasNext()){
-				System.out.println(sc.nextLine());
+			while(scan.hasNext()){
+				System.out.println(scan.nextLine());
 			}
 		}
 		
@@ -29,8 +29,8 @@ public class DisplayContentOfFile{
 		}
 		
 		finally{
-			//Closes the resource named 'sc'.
-			sc.close();
+			//Closes the resource named 'scan'.
+			scan.close();
 		}
 	}
 }

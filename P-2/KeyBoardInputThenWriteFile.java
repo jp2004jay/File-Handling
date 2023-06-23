@@ -9,7 +9,7 @@ public class KeyBoardInputThenWriteFile{
 	
 	public static void main(String []args){
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a record (or 'save' to save the file.): ");
 		FileWriter fileWriter = null;
 		
@@ -21,7 +21,7 @@ public class KeyBoardInputThenWriteFile{
 			the data will be taken and written to the file.
 			Until the user type 'Save'. */
 			while(true){
-				String record = sc.nextLine();
+				String record = scan.nextLine();
 	
 				if(record.equalsIgnoreCase("save")){
 					break;
