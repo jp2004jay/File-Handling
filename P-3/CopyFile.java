@@ -16,11 +16,12 @@ public class CopyFile{
 		System.out.println("Enter file name (without extensions): ");
 		String fileName = scan.nextLine();
 		
+		Scanner readFile = null;
 		FileWriter fileWriter = null;
 		
 		try{
 			//Initialised 'readFile' with capable to read data.
-			Scanner readFile = new Scanner(new File(fileName+".txt"));
+			readFile = new Scanner(new File(fileName+".txt"));
 			
 			//Initialised 'fileWriter' with capable to make a new file.
 			fileWriter = new FileWriter(fileName+"-copy.txt");
@@ -32,7 +33,6 @@ public class CopyFile{
 			}
 			
 			//Closes the all resource here.
-			readFile.close();
 			fileWriter.close();
 			
 			System.out.println("Command executed successfully");
@@ -45,6 +45,9 @@ public class CopyFile{
 			/*If there is any problem in outputting the file, 
 			that problem will be printed here.*/
 			e.printStackTrace();
+		}
+		finally{
+			readFile.close();
 		}
 	}
 }

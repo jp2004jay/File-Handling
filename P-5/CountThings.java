@@ -16,9 +16,11 @@
 		int tabsCount = 0;
 		int lineCount = 0;
 		
+		Scanner scan = null;
+		
 		try{
 			//Initialised 'scan' with capable to read a file. 
-			Scanner scan = new Scanner(new File("example.txt"));
+			scan = new Scanner(new File("example.txt"));
 			
 			while(scan.hasNext()){
 				String temp = scan.nextLine();
@@ -48,12 +50,14 @@
 				spaceCount = tempSpace.length-1;
 				lineCount++;
 			}
-			
-			scan.close();
 		}
 		
 		catch(Exception e){
 			e.printStackTrace();
+		}
+		
+		finally{
+			scan.close();
 		}
 		
 		System.out.println("\"In Whole File\"");

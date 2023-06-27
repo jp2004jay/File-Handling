@@ -12,6 +12,7 @@ public class CopyFile{
 	
 	public static void main(String []args){
 		
+		Scanner readFile = null;
 		FileWriter fileWriter = null;
 		
 		String sourceFile = args[0];
@@ -19,7 +20,7 @@ public class CopyFile{
 		
 		try{
 			//Initialised 'readFile' with capable to read data.
-			Scanner readFile = new Scanner(new File(sourceFile+".txt"));
+			readFile = new Scanner(new File(sourceFile+".txt"));
 			
 			//Initialised 'fileWriter' with capable to make a new file.
 			fileWriter = new FileWriter(destinationFile+".txt");
@@ -31,19 +32,24 @@ public class CopyFile{
 			}
 			
 			//Closes the all resource here.
-			readFile.close();
 			fileWriter.close();
 			
 			System.out.println("Command executed successfully");
 		}
+		
 		catch(FileNotFoundException fnfe){
 			//If "File not found", then this line is executed.
 			System.out.println("File not found!");
 		}
+		
 		catch(Exception e){
 			/*If there is any problem in outputting the file, 
 			that problem will be printed here.*/
 			e.printStackTrace();
+		}
+		
+		finally{
+			readFile.close();
 		}
 	}
 }
