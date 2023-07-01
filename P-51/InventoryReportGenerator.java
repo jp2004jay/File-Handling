@@ -1,3 +1,19 @@
+Create an inventory file using the data shown below:
+Part no Price Quantity on
+hand
+Reorder point Minimum order
+0123 1.23 23 20 20
+0234 2.34 34 50 25
+3456 34.56 56 50 10
+4567 45.67 7 10 5
+5678 6.78 75 75 25
+Write a program to read the inventory file and create an inventory report. The report will contain
+the part number, price, quantity on hand, reorder point, minimum order and order amount. The
+order amount is calculated when the quantity on hand falls below the reorder point. It is
+calculated as the sum of reorder point and the minimum order less the quantity on hand. Provide
+a report heading such as “inventory report” captions for each column and an “end of report”
+message at the end of report. Print the part number with leading zeroes.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

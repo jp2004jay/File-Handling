@@ -1,3 +1,5 @@
+Write a program to that copies one text file to another and insert blank lines between paragraphs
+in the new file. Paragraphs are identified by a newline character.
 
 import java.io.File;
 import java.io.FileWriter;
@@ -18,5 +20,6 @@ public class InsertBlankLineInParagraph{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		System.out.println("Command Executed Successfully");
 	}
 }

@@ -1,3 +1,8 @@
+Given a list of names of students in a class, write a program to store the names in a file on disk.
+Make a provision to display the nth name in the list (n is data to be read) and to display all names
+starting with S.
+
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

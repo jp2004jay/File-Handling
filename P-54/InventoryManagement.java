@@ -1,3 +1,10 @@
+Write a program that uses the inventory file produced in above program. The user present the
+program with a shopping list of items to be purchased. The program inputs the stored inventory
+file and then it decrements the count for each item on the shopping list and charges the customer
+appropriately. The program must check for the presence of the item and for the sufficient
+quantities in stock. Before terminating the program, it must update the inventory file to reflect
+the depletion in stock. It might also print a list of items that need to be restocked.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

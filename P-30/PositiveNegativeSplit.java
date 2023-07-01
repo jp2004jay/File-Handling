@@ -1,3 +1,6 @@
+Write a program which stores 10 integers in a file and then reads them and stores all the positive
+number in one file, while all negative numbers in another file.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -48,5 +51,7 @@ public class PositiveNegativeSplit{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		System.out.println("Command Executed Successfully");
 	}
 }

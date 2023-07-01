@@ -1,3 +1,6 @@
+Write a program to store an array of real numbers in file and read them.
+
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

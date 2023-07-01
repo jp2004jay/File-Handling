@@ -1,3 +1,6 @@
+Write a program to find smallest integer from the N integer stored in file “INT”
+
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

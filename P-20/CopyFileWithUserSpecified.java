@@ -1,3 +1,5 @@
+Write a program to copy only lines beginning with user specified character
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -28,5 +30,7 @@ public class CopyFileWithUserSpecified{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		System.out.println("Command Executed Successfully");
 	}
 }

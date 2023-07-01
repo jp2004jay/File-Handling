@@ -1,3 +1,6 @@
+Write a program to change all uppercase character in a file to lowercase, and vice-versa.
+
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -42,5 +45,7 @@ public class UpperLowerViceVersa{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		System.out.println("Command Executed Successfully");
 	}
 }

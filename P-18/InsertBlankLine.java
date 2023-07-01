@@ -1,3 +1,7 @@
+/*
+Write a program to insert a blank line after the seventh line in a file
+*/
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -26,5 +30,6 @@ public class InsertBlankLine{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		System.out.println("Command Executed Successfully");
 	}
 }

@@ -1,3 +1,6 @@
+Write a program to read a score from a file, count the score over 90, copy the score over 90 to a
+new file and print the number of score over 90 to the monitor.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;

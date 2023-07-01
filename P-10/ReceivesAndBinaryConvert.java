@@ -36,7 +36,8 @@ public class ReceivesAndBinaryConvert{
 					
 					int charBinary = 0;
 					int place = 1;
-					
+
+					// Add the digit to the binary representation
 					while(charASCII != 0){
 						int digit = charASCII % 2;
 						charASCII = charASCII / 2;
@@ -46,6 +47,7 @@ public class ReceivesAndBinaryConvert{
 					
 					fileWriter.write(""+charBinary+" ");
 				}
+
 				fileWriter.write("\n");
 			}
 			//Closes the resource named 'fileWriter'.
@@ -57,5 +59,7 @@ public class ReceivesAndBinaryConvert{
 			that problem will be printed here.*/
 			e.printStackTrace();
 		}
+
+		System.out.println("File Saved Successfully in Binary Form.");
 	}
 }

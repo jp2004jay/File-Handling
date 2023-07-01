@@ -1,3 +1,7 @@
+Write a program which writes whole ASCII set in the file “ASC_SET”. After that program reads and
+prints only digits and uppercase alphabets from the file.
+
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;

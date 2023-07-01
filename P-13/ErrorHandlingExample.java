@@ -1,10 +1,16 @@
+/*
+ * Write a program illustrating the use of error handling function.
+*/
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class ErrorHandlingExample {
+
     public static void main(String[] args) {
+
         // Declare file paths
         String inputFile = "input.txt";
         String outputFile = "output.txt";
@@ -40,18 +46,26 @@ public class ErrorHandlingExample {
 
                 System.out.println("Result has been written to the output file.");
 
-            } catch (IOException e) {
+            } 
+
+            catch (IOException e) {
                 System.out.println("An error occurred while writing to the output file.");
                 e.printStackTrace();
             }
 
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading from the input file.");
             e.printStackTrace();
-        } catch (ArithmeticException e) {
+        } 
+
+        catch (ArithmeticException e) {
             System.out.println("An error occurred: Division by zero is not allowed.");
             e.printStackTrace();
-        } catch (Exception e) {
+        } 
+
+        catch (Exception e) {
             System.out.println("An unknown error occurred.");
             e.printStackTrace();
         }

@@ -1,3 +1,5 @@
+Write a program to read a file and display contents with its line numbers.
+
 import java.io.File;
 import java.util.Scanner;
 

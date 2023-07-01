@@ -1,3 +1,11 @@
+Write a program to record information about stock received at the store. The user enter the
+information about each product received the item name, the price per user, the price per unit, the
+quantity and date received and the supplier. Each product is represented by a structure which is
+stored as a record in a file called “inventory”. The structure also contains a member named
+“count”. Which is used to record the number of units the number of unit of the product in the
+store at any time. This member is initialized to “quantity received” and would be decremented by
+1 each time a unit of the product purchased.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

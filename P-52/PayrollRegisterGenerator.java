@@ -1,3 +1,22 @@
+Create an employee file as shown in below table:
+Employee no Department Pay rate Exempt Hours worked
+0101 41 8.11 Y 49
+0722 32 7.22 N 40
+1273 23 5.43 Y 39
+2584 14 6.74 N 45
+Write a program that read the employee file and create a payroll register. The register will contain
+the following data.
+1. Employee number
+2. Department
+3. Pay rate
+4. Exempt
+5. Hours worked
+6. Base pay
+7. Over time (over time pay is only for non exempt employees. An employee is exempt if Y
+appears in the exempt column. Over time is paid at time and one half for all hours worked
+over 40.
+8. Total pay
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

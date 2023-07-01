@@ -1,3 +1,7 @@
+Write a program that merges lines alternately from two files and writes the results to new file. If
+one file has less number of lines than the other, the remaining lines from the larger file should be
+simply copied into the target file
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -32,6 +36,8 @@ public class MergeTwoFileWithAlternating{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		System.out.println("Command Executed Successfully");
 	}	
 	public static ArrayList<String> readData(String fileName) throws Exception{
 		ArrayList<String> data = new ArrayList<String>();

@@ -1,3 +1,18 @@
+There are 100 records present in a file with the following structure:
+struct date
+{
+int d, m, y ;
+} ;
+struct employee
+{
+int empcode[6] ;
+char empname[20] ;
+struct date join_date ;
+float salary ;
+} ;
+Write a program to read these records, arrange them in ascending order of join_date and write
+them in to a target file.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

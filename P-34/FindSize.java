@@ -1,3 +1,5 @@
+Write a program to find the size of a text file without traversing it character by character.
+
 import java.io.File;
 
 public class FindSize{

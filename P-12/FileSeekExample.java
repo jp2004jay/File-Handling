@@ -1,8 +1,14 @@
+/*
+ * Write a program to demonstrate fseek() function.
+*/
+
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class FileSeekExample {
+
     public static void main(String[] args) {
+
         try {
             RandomAccessFile file = new RandomAccessFile("example.txt", "rw");
 
@@ -19,7 +25,9 @@ public class FileSeekExample {
             System.out.println("Data read: " + new String(buffer));
 
             file.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

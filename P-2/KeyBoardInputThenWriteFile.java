@@ -31,6 +31,7 @@ public class KeyBoardInputThenWriteFile{
 			}
 			//Closes the resource named 'fileWriter'.
 			fileWriter.close();
+			System.out.println("File Saved Successfully");
 		}
 		
 		catch(Exception e){

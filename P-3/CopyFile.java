@@ -37,15 +37,18 @@ public class CopyFile{
 			
 			System.out.println("Command executed successfully");
 		}
+
 		catch(FileNotFoundException fnfe){
 			//If "File not found", then this line is executed.
 			System.out.println("File not found!");
 		}
+
 		catch(Exception e){
 			/*If there is any problem in outputting the file, 
 			that problem will be printed here.*/
 			e.printStackTrace();
 		}
+		
 		finally{
 			readFile.close();
 		}

@@ -1,5 +1,5 @@
 /*
- * Write a program to delete lines in a file.
+ * Write a program to delete blank lines in a file.
 */
 
 import java.io.File;
@@ -41,5 +41,7 @@ public class DeleteBlankLines{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+
+		System.out.println("Command Executed Successfully");
 	}
 }

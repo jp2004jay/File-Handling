@@ -1,3 +1,5 @@
+. Write a program to insert blank line after each line in a file.
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -25,5 +27,7 @@ public class InsertBlankLineAfterEachLine{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		System.out.println("Command Executed Successfully");
 	}
 }

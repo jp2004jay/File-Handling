@@ -1,3 +1,5 @@
+Write a program to delete sixth line in a file. Do not change sixth line as a blank line. Delete it
+completely.
 
 import java.io.File;
 import java.io.FileWriter;
@@ -31,5 +33,8 @@ public class DeleteSixthLine{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+
+		
+		System.out.println("Command Executed Successfully");
 	}
 }

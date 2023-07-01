@@ -1,3 +1,6 @@
+Write a program to duplicate the fourth line in a file.
+
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
@@ -27,5 +30,7 @@ public class DuplicateFourthLine{
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		System.out.println("Command Executed Successfully");
 	}
 }
