@@ -1,31 +1,59 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class ErrorHandlingExample {
     public static void main(String[] args) {
-        BufferedReader reader = null;
-        try {
-            // Open the file
-            reader = new BufferedReader(new FileReader("example.txt"));
+        // Declare file paths
+        String inputFile = "input.txt";
+        String outputFile = "output.txt";
 
-            // Read the file line by line
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            // Handle the exception
-            System.err.println("An error occurred while reading the file: " + e.getMessage());
-        } finally {
-            // Close the file in the finally block to ensure it's always closed
+        // Attempt to read input from the file
+        try {
+            // Create a File object
+            File file = new File(inputFile);
+
+            // Create a Scanner object to read from the file
+            Scanner scanner = new Scanner(file);
+
+            // Read input from the file
+            int num1 = scanner.nextInt();
+            int num2 = scanner.nextInt();
+
+            // Perform division operation
+            int result = num1 / num2;
+
+            // Close the scanner
+            scanner.close();
+
+            // Attempt to write the result to the output file
             try {
-                if (reader != null) {
-                    reader.close();
-                }
+                // Create a FileWriter object to write to the file
+                FileWriter writer = new FileWriter(outputFile);
+
+                // Write the result to the file
+                writer.write("The result of the division is: " + result);
+
+                // Close the writer
+                writer.close();
+
+                System.out.println("Result has been written to the output file.");
+
             } catch (IOException e) {
-                System.err.println("An error occurred while closing the file: " + e.getMessage());
+                System.out.println("An error occurred while writing to the output file.");
+                e.printStackTrace();
             }
+
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading from the input file.");
+            e.printStackTrace();
+        } catch (ArithmeticException e) {
+            System.out.println("An error occurred: Division by zero is not allowed.");
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("An unknown error occurred.");
+            e.printStackTrace();
         }
     }
 }

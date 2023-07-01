@@ -1,0 +1,58 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+class Employee {
+    int empno;
+    String name;
+    int basic;
+    int grade;
+
+    public Employee(int empno, String name, int basic, int grade) {
+        this.empno = empno;
+        this.name = name;
+        this.basic = basic;
+        this.grade = grade;
+    }
+}
+
+public class MissingEmployeeNumbers {
+    public static void main(String[] args) {
+        try {
+            File file = new File("EMPLOYEE.DAT");
+            Scanner scanner = new Scanner(file);
+
+            int previousEmpNo = 0;
+            int currentEmpNo;
+            FileWriter writer = new FileWriter("MissingEmployeeNumbers.txt");
+
+            while (scanner.hasNext()) {
+                int empno = scanner.nextInt();
+                scanner.nextLine(); // Move scanner to the next line
+                String name = scanner.nextLine();
+                int basic = scanner.nextInt();
+                int grade = scanner.nextInt();
+                scanner.nextLine(); // Move scanner to the next line
+
+                currentEmpNo = empno;
+
+                if (currentEmpNo - previousEmpNo > 1) {
+                    for (int i = previousEmpNo + 1; i < currentEmpNo; i++) {
+                        writer.write(String.valueOf(i) + "\n");
+                    }
+                }
+
+                previousEmpNo = currentEmpNo;
+            }
+
+            scanner.close();
+            writer.close();
+
+            System.out.println("Missing employee numbers are saved to MissingEmployeeNumbers.txt file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading the EMPLOYEE.DAT file or writing to the output file.");
+            e.printStackTrace();
+        }
+    }
+}
