@@ -1,0 +1,7 @@
+Payroll Register
+----------------
+Emp. Number  Dept.      Pay Rate Exempt Hours Worked  Base Pay  Overtime  Total Pay
+0101         41         $8.11    Y      49            $397.39   $0.00     $397.39  
+0722         32         $7.22    N      40            $288.80   $0.00     $288.80  
+1273         23         $5.43    Y      39            $211.77   $0.00     $211.77  
+2584         14         $6.74    N      45            $303.30   $50.55    $353.85  

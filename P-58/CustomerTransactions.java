@@ -29,8 +29,17 @@ class Customer {
     public void updateBalance(float amount, char transType) {
         if (transType == 'D') {
             balance += amount;
-        } else if (transType == 'W' && balance - amount >= 100) {
-            balance -= amount;
+        } else if (transType == 'W') {
+            if((balance - amount) >= 100){
+                balance -= amount;
+            }
+            else {
+                System.out.println("SCAM! \nAnything Wrong!\n"+accNo+" is FRAUD!");
+            }
+            
+        }
+        else{
+            System.out.println("System CRASH!");
         }
     }
 
@@ -54,7 +63,7 @@ public class CustomerTransactions {
 
             while (customerScanner.hasNextLine()) {
                 String line = customerScanner.nextLine();
-                String[] parts = line.split(",");
+                String[] parts = line.split(", ");
 
                 int accNo = Integer.parseInt(parts[0].trim());
                 String name = parts[1].trim();
@@ -73,7 +82,7 @@ public class CustomerTransactions {
 
             while (transactionScanner.hasNextLine()) {
                 String line = transactionScanner.nextLine();
-                String[] parts = line.split(",");
+                String[] parts = line.split(", ");
 
                 int accNo = Integer.parseInt(parts[0].trim());
                 char transType = parts[1].trim().charAt(0);

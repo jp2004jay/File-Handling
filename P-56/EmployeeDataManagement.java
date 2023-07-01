@@ -157,6 +157,7 @@ public class EmployeeDataManagement {
     }
 
     private static void updateEmployeeSalary() {
+        Scanner userInput = new Scanner(System.in);
         try {
             File inputFile = new File("EmployeeData.txt");
             File tempFile = new File("TempEmployeeData.txt");
@@ -165,8 +166,8 @@ public class EmployeeDataManagement {
             FileWriter writer = new FileWriter(tempFile);
 
             System.out.print("Enter employee number to update salary: ");
-            int empNo = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            String empNo = userInput.nextLine();
+             // Consume newline character
 
             boolean employeeFound = false;
 
@@ -175,8 +176,7 @@ public class EmployeeDataManagement {
 
                 if (line.contains("Employee Number: " + empNo)) {
                     System.out.print("Enter new gross salary: ");
-                    double newGrossSalary = scanner.nextDouble();
-                    scanner.nextLine(); // Consume newline character
+                    double newGrossSalary = userInput.nextDouble();
 
                     Employee employee = parseEmployeeData(line);
                     employee.grossSalary = newGrossSalary;
@@ -206,6 +206,7 @@ public class EmployeeDataManagement {
     }
 
     private static void deleteEmployeeData() {
+        Scanner userInput = new Scanner(System.in);
         try {
             File inputFile = new File("EmployeeData.txt");
             File tempFile = new File("TempEmployeeData.txt");
@@ -214,8 +215,7 @@ public class EmployeeDataManagement {
             FileWriter writer = new FileWriter(tempFile);
 
             System.out.print("Enter employee number to delete: ");
-            int empNo = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            String empNo = userInput.nextLine();
 
             boolean employeeFound = false;
 

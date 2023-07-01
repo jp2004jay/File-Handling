@@ -20,7 +20,7 @@ class Employee {
 public class MissingEmployeeNumbers {
     public static void main(String[] args) {
         try {
-            File file = new File("EMPLOYEE.DAT");
+            File file = new File("EMPLOYEE.txt");
             Scanner scanner = new Scanner(file);
 
             int previousEmpNo = 0;
@@ -28,12 +28,12 @@ public class MissingEmployeeNumbers {
             FileWriter writer = new FileWriter("MissingEmployeeNumbers.txt");
 
             while (scanner.hasNext()) {
-                int empno = scanner.nextInt();
-                scanner.nextLine(); // Move scanner to the next line
-                String name = scanner.nextLine();
-                int basic = scanner.nextInt();
-                int grade = scanner.nextInt();
-                scanner.nextLine(); // Move scanner to the next line
+
+                String[] record = scanner.nextLine().split("\t");
+                int empno = Integer.parseInt(record[0]);
+                String name = record[1];
+                int basic = Integer.parseInt(record[2]);
+                int grade = Integer.parseInt(record[3]);
 
                 currentEmpNo = empno;
 

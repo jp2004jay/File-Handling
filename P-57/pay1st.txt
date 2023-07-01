@@ -1,0 +1,24 @@
+Employee Number: 101
+Name: Abhisek
+Hourly Rate: $8.11
+Hours Worked: 49
+Salary: $433.885
+
+Employee Number: 102
+Name: Bhargav
+Hourly Rate: $7.22
+Hours Worked: 40
+Salary: $288.8
+
+Employee Number: 103
+Name: Parth
+Hourly Rate: $5.43
+Hours Worked: 39
+Salary: $211.76999999999998
+
+Employee Number: 104
+Name: Kisan
+Hourly Rate: $6.74
+Hours Worked: 45
+Salary: $320.15000000000003
+

@@ -137,19 +137,12 @@ public class TextUtility {
             File file = new File(fileName);
             Scanner scanner = new Scanner(file);
 
-            int charCount = 0;
-
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                charCount += line.length();
 
-                if (charCount > 60) {
-                    System.out.println();
-                    charCount = line.length();
+                if (line.length() >= 60) {
+                    System.out.println(line);
                 }
-
-                System.out.print(line + " ");
-                charCount += 1; // Account for space character
             }
 
             scanner.close();

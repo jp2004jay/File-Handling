@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Student {
@@ -25,7 +25,7 @@ public class StudentRecordSorter {
     public static void main(String[] args) {
         File file = new File("student_records.txt");
 
-        List<Student> studentList = new ArrayList<>();
+        ArrayList<Student> studentList = new ArrayList<Student>();
 
         try {
             Scanner scanner = new Scanner(file);

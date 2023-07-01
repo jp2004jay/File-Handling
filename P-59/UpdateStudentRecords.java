@@ -38,7 +38,7 @@ public class UpdateStudentRecords {
 
             while (masterScanner.hasNextLine()) {
                 String line = masterScanner.nextLine();
-                String[] parts = line.split(",");
+                String[] parts = line.split("\t");
 
                 int rollNo = Integer.parseInt(parts[0].trim());
                 String name = parts[1].trim();
@@ -56,7 +56,7 @@ public class UpdateStudentRecords {
 
             while (transactionScanner.hasNextLine()) {
                 String line = transactionScanner.nextLine();
-                String[] parts = line.split(",");
+                String[] parts = line.split(", ");
 
                 int rollNo = Integer.parseInt(parts[0].trim());
                 String code = parts[1].trim();

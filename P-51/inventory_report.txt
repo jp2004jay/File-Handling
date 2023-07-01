@@ -1,0 +1,8 @@
+Inventory Report
+----------------
+Part   Price  Quantity   Reorder      Minimum   Order       
+0123   $1.23 	 23         20           20        0           
+0234   $2.23 	 34         50           25        41          
+3456   $34.56 	 56         50           10        0           
+4567   $45.67 	 7          10           5         8           
+5678   $6.78 	 75         75           25        0           

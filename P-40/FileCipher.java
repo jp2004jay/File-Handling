@@ -7,15 +7,15 @@ public class FileCipher {
     public static void main(String[] args) {
         String inputFilePath = "input.txt";
         String outputFilePath = "output.txt";
-
+        String decryptOutputFile = "decryptOutput.txt";
         // Perform encryption
         int offset = 128;
         encryptFile(inputFilePath, outputFilePath, offset);
         System.out.println("Encryption completed. Result saved in output.txt");
 
         // Perform decryption
-        decryptFile(outputFilePath, inputFilePath, offset);
-        System.out.println("Decryption completed. Result saved in input.txt");
+        decryptFile(outputFilePath, decryptOutputFile, offset);
+        System.out.println("Decryption completed. Result saved in decryptOutput.txt");
     }
 
     private static void encryptFile(String inputFilePath, String outputFilePath, int offset) {

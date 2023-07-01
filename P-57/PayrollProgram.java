@@ -37,6 +37,7 @@ class Employee {
         double overtimePay = 0.0;
 
         if (hoursWorked > 40) {
+            basePay = hourlyRate * 40;
             int overtimeHours = hoursWorked - 40;
             overtimePay = overtimeHours * (hourlyRate * 1.5);
         }
@@ -60,11 +61,10 @@ public class PayrollProgram {
             File inputFile = new File("employees.txt");
             Scanner scanner = new Scanner(inputFile);
 
-            FileWriter writer = new FileWriter("pay.lst");
+            FileWriter writer = new FileWriter("pay1st.txt");
 
             while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] parts = line.split(",");
+                String[] parts = scanner.nextLine().split(", ");
 
                 int empNo = Integer.parseInt(parts[0]);
                 String name = parts[1];

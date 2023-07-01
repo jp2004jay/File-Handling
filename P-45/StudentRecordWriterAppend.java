@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class StudentRecordWriter {
+public class StudentRecordWriterAppend {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class StudentRecordWriter {
         File file = new File("student_records.txt");
 
         try {
-            FileWriter writer = new FileWriter(file);
+            FileWriter writer = new FileWriter(file, true);
 
             for (int i = 0; i < numRecords; i++) {
                 System.out.println("Enter details for student " + (i + 1) + ":");

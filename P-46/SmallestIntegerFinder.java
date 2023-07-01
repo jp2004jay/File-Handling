@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SmallestIntegerFinder {
     public static void main(String[] args) {
-        File file = new File("INT");
+        File file = new File("INT.txt");
 
         try {
             Scanner scanner = new Scanner(file);

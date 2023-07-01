@@ -40,11 +40,11 @@ public class InventoryReportGenerator {
                 }
 
                 // Print inventory details
-                System.out.printf("%-6s $%.2f %-10d %-12d %-9d %-12d\n",
+                System.out.printf("%-6s $%.2f \t %-10d %-12d %-9d %-12d\n",
                         partNumber, price, quantity, reorderPoint, minimumOrder, orderAmount);
 
                 // Write inventory details to file
-                writer.write(String.format("%-6s $%.2f %-10d %-12d %-9d %-12d\n",
+                writer.write(String.format("%-6s $%.2f \t %-10d %-12d %-9d %-12d\n",
                         partNumber, price, quantity, reorderPoint, minimumOrder, orderAmount));
             }
 

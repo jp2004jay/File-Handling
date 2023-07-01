@@ -1,0 +1,9 @@
+1	John Smith	5000	3
+3	Michael Johnson	4500	2
+4	Sarah Anderson	5500	3
+5	Robert Williams	7000	5
+6	Emily Davis	4000	1
+7	Christopher	6500	4
+8	Olivia Martinez	4800	2
+13	Daniel Taylor	5200	3
+18	Sophia Wilson	5800	4
