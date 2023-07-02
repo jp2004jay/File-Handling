@@ -1,9 +1,11 @@
 /*
  * Write a program to carry out the following:
-    => To read a text file TRIAL.TXT consisting of a maximum of 50 lines of text, each line with a maximum of 80 characters.
+    => To read a text file TRIAL.TXT consisting of a maximum of 50 lines of text, 
+       each line with a maximum of 80 characters.
     => Count and display the number of words contained in the file.
     => Display the total number of four letter words in the text file.
- * Assume that the end of a word may be a space, comma or a full-stop followed by one or more spaces or a newline character.
+ * Assume that the end of a word may be a space, 
+   comma or a full-stop followed by one or more spaces or a newline character.
 */
 
 import java.io.File;

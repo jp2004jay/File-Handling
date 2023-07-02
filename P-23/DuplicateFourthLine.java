@@ -1,5 +1,6 @@
-Write a program to duplicate the fourth line in a file.
-
+/* 
+ * Write a program to duplicate the fourth line in a file.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

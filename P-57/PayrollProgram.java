@@ -1,6 +1,8 @@
-Write a payroll program which reads the employee information from a file and prints their pay
-slip. The pay slips are stored in pay.lst file.
-
+/*
+ * Write a payroll program which reads the employee information 
+   from a file and prints their pay slip. 
+ * The pay slips are stored in pay.lst file.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

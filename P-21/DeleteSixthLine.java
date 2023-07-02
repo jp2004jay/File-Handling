@@ -1,5 +1,8 @@
-Write a program to delete sixth line in a file. Do not change sixth line as a blank line. Delete it
-completely.
+/*
+ * Write a program to delete sixth line in a file. 
+ * Do not change sixth line as a blank line. 
+ * Delete it completely.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

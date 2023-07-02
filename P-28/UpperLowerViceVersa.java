@@ -1,5 +1,6 @@
-Write a program to change all uppercase character in a file to lowercase, and vice-versa.
-
+/* 
+ * Write a program to change all uppercase character in a file to lowercase, and vice-versa.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

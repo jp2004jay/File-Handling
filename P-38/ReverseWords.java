@@ -1,12 +1,13 @@
-Write a program to carry out the following:
-(a) Read a text file ‘INPUT.TXT’
-(b) Print each word in reverse order
-Example,
-Input: INDIA IS MY COUNTRY
-Output: AIDNI SI YM YRTNUOC
-Assume that each word length is maximum of 10 characters and each word is separated by
-newline/blank characters.
-
+/*
+ * Write a program to carry out the following:
+ * (a) Read a text file ‘INPUT.TXT’
+ * (b) Print each word in reverse order
+ * Example,
+ * Input: INDIA IS MY COUNTRY
+ * Output: AIDNI SI YM YRTNUOC
+ * Assume that each word length is maximum of 10 characters and 
+   each word is separated by newline/blank characters.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

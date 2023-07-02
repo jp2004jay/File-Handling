@@ -1,6 +1,7 @@
-Write a program that writes the multiple of number between lowlimit and highlimit to a text file.
-Assume that lowlimit < highlimit and number is not equal to zero.
-
+/*
+ * Write a program that writes the multiple of number between lowlimit and highlimit to a text file.
+ * Assume that lowlimit < highlimit and number is not equal to zero.
+*/
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,12 +1,13 @@
-In a small firm employee numbers are given in serial numerical order that is 1, 2, 3, etc.
-Create a file of employee data with following information:
-- Employee number, name, sex, gross salary.
-- If more employees join, append their data to the file.
-- If an employee with serial number 25 (say) leaves, delete
-- The record by making gross salary 0.
--If some employee’s gross salary increases, retrieve the record and update the salary.
-Write a program to implement the above operations.
-
+/*
+ * In a small firm employee numbers are given in serial numerical order that is 1, 2, 3, etc.
+ * Create a file of employee data with following information:
+    - Employee number, name, sex, gross salary.
+    - If more employees join, append their data to the file.
+    - If an employee with serial number 25 (say) leaves, delete
+    - The record by making gross salary 0.
+    -If some employee’s gross salary increases, retrieve the record and update the salary.
+ * Write a program to implement the above operations.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

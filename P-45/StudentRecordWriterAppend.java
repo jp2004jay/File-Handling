@@ -1,6 +1,7 @@
-Write a program to print all the records of file created in above program, append a record and
-update the record.
-
+/* 
+ * Write a program to print all the records of file created in above program, 
+   append a record and update the record.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

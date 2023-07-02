@@ -1,4 +1,6 @@
-Write a program that reads the first word of each line of input and prints them out at the end.
+/*
+ * Write a program that reads the first word of each line of input and prints them out at the end.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

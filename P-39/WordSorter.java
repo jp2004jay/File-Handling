@@ -1,11 +1,15 @@
-Write a program to read a list of words, sort the words in alphabetical order and display them one
-word per line. Also give the total number of words in the list. Output format should be:
-Total Number of words in the list is _______
-Alphabetical listing of words is:
-------
-------
-Assume the end of the list is indicated by ZZZZZZ and there are maximum in 25 words in the Text
-file.
+/*
+ * Write a program to read a list of words, sort the words in alphabetical order.
+ * Display them one word per line. 
+ * Also give the total number of words in the list. 
+ * Output format should be:
+ * Total Number of words in the list is _______
+ * Alphabetical listing of words is:
+    ------
+    ------
+ * Assume the end of the list is indicated by ZZZZZZ. 
+ * There are maximum in 25 words in the Text file.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

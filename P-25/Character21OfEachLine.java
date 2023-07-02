@@ -1,8 +1,10 @@
-Write a program that inserts 21st character of each line in a file to a new line. All extracted
-character are to on the same file. If a line in input file has fewer than 21 characters, write the last
-character. If line is blank then copy nothing. At the end of file write a new line to the new file and
-close it.
-
+/*
+ * Write a program that inserts 21st character of each line in a file to a new line. 
+ * All extracted character are to on the same file. 
+ * If a line in input file has fewer than 21 characters, write the last character. 
+ * If line is blank then copy nothing. 
+ * At the end of file write a new line to the new file and close it.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

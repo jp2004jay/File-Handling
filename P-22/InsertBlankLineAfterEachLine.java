@@ -1,4 +1,6 @@
-. Write a program to insert blank line after each line in a file.
+/*
+ * Write a program to insert blank line after each line in a file.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

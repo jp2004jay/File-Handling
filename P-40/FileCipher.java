@@ -1,13 +1,20 @@
-Write a program to encrypt/decrypt a file using:
-(1) An offset cipher: In an offset cipher each character from the source file is offset with a fixed
-value and then written to the target file.
-For example, if character read from the source file is ‘A’, then convert this into a new character by
-offsetting ‘A’ by a fixed value, say 128, and then writing the new character to the target file.
-(2) A substitution cipher: In this each character read from the source file is substituted by a
-corresponding predetermined character and this character is written to the target file.
-For example, if character ‘A’ is read from the source file, and if we have decided that every ‘A’ is
-to be substituted by ‘!’, then a ‘!’ would be written to the target file in place of every ‘A’ Similarly,
-every ‘B’ would be substituted by ‘5’ and so on.
+/*
+ * Write a program to encrypt/decrypt a file using:
+ * (1) An offset cipher: In an offset cipher each character 
+   from the source file is offset with a fixed value and 
+   then written to the target file.
+ * For example, if character read from the source file is ‘A’, 
+   then convert this into a new character by offsetting ‘A’ 
+   by a fixed value, say 128, and then writing the 
+   new character to the target file.
+ * (2) A substitution cipher: In this each character read from 
+   the source file is substituted by a corresponding predetermined 
+   character and this character is written to the target file.
+ * For example, if character ‘A’ is read from the source file, 
+   and if we have decided that every ‘A’ is to be substituted by ‘!’, 
+   then a ‘!’ would be written to the target file in place of every ‘A’ 
+   Similarly, every ‘B’ would be substituted by ‘5’ and so on.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

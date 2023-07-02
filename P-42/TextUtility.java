@@ -1,10 +1,11 @@
-Write a menu driven text utility program. The program will have following capabilities:
-1. Copy a user named file to a new file.
-2. Change the file format to a double space
-3. Remove all blank lines
-4. Display the content of file as a series of 60 character lines with no words split between
-lines.
-
+/* 
+ * Write a menu driven text utility program. The program will have following capabilities:
+ * 1. Copy a user named file to a new file.
+ * 2. Change the file format to a double space
+ * 3. Remove all blank lines
+ * 4. Display the content of file as a series of 60 character 
+   lines with no words split between lines.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

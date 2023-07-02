@@ -1,5 +1,5 @@
 /*
-Write a program to insert a blank line after the seventh line in a file
+ * Write a program to insert a blank line after the seventh line in a file
 */
 
 import java.io.File;

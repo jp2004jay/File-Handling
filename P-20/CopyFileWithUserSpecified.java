@@ -1,4 +1,6 @@
-Write a program to copy only lines beginning with user specified character
+/*
+ * Write a program to copy only lines beginning with user specified character
+*/
 
 import java.io.File;
 import java.io.FileWriter;

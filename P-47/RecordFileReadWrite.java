@@ -1,4 +1,6 @@
-Read and Write records to a file using structure.
+/* 
+ * Read and Write records to a file using structure.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

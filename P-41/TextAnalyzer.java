@@ -1,6 +1,10 @@
-Write a text analyser program that reads the text file. The program prints a menu that gives the
-user the options of counting lines, words, characters or sentences or all of the above provide a
-separate function for each option. At the end of analysis write an appropriate report.
+/* 
+ * Write a text analyser program that reads the text file. 
+ * The program prints a menu that gives the user the options of 
+   counting lines, words, characters or sentences or all of the 
+   above provide a separate function for each option. 
+ * At the end of analysis write an appropriate report.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,6 @@
-Write a program to copy a file, insert two space characters at the beginning of each line.
+/* 
+ * Write a program to copy a file, insert two space characters at the beginning of each line.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

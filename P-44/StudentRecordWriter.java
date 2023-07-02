@@ -1,4 +1,6 @@
-Write a program which enters N student records in a file in binary form.
+/* 
+ * Write a program which enters N student records in a file in binary form.
+*/
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,6 @@
-Write a program that reads the odd number between 300 to 500 to a text file
+/*
+ * Write a program that reads the odd number between 300 to 500 to a text file
+*/
 
 import java.io.File;
 import java.util.Scanner;
