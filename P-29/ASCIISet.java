@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class ASCIISet{
+	
 	public static void main(String[] args){
 		try{
 			FileWriter fileWrite = new FileWriter("ASC_SET.txt");
