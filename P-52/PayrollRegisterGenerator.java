@@ -25,10 +25,13 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class PayrollRegisterGenerator {
+
     public static void main(String[] args) {
+
         File file = new File("employee_file.txt");
 
         try {
+
             Scanner scanner = new Scanner(file);
 
             // Print register heading
@@ -46,6 +49,7 @@ public class PayrollRegisterGenerator {
                     "Emp. Number", "Dept.", "Pay Rate", "Exempt", "Hours Worked", "Base Pay", "Overtime", "Total Pay"));
 
             while (scanner.hasNextLine()) {
+
                 String line = scanner.nextLine();
                 String[] parts = line.split("\\s+");
 
@@ -72,6 +76,7 @@ public class PayrollRegisterGenerator {
                 // Write payroll details to file
                 writer.write(String.format("%-12s %-10d $%-7.2f %-6s %-13d $%-8.2f $%-8.2f $%-8.2f\n",
                         empNumber, department, payRate, isExempt ? "Y" : "N", hoursWorked, basePay, overtimePay, totalPay));
+            
             }
 
             scanner.close();
@@ -80,7 +85,9 @@ public class PayrollRegisterGenerator {
             // Print end of register message
             System.out.println("----------------");
             System.out.println("End of Register");
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading the employee file.");
             e.printStackTrace();
         }

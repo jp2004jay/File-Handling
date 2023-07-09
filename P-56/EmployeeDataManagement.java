@@ -15,11 +15,21 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class Employee {
+
     int empNo;
     String name;
     char sex;
     double grossSalary;
-
+        
+    /*
+     * Constructor for the Employee class.
+     * Initializes the properties of the employee.
+     *
+     * @param empNo        The employee number.
+     * @param name         The name of the employee.
+     * @param sex          The sex of the employee.
+     * @param grossSalary  The gross salary of the employee.
+    */
     public Employee(int empNo, String name, char sex, double grossSalary) {
         this.empNo = empNo;
         this.name = name;
@@ -27,6 +37,11 @@ class Employee {
         this.grossSalary = grossSalary;
     }
 
+    /**
+     * Returns a string representation of the employee.
+     *
+     * @return The string representation of the employee.
+    */
     @Override
     public String toString() {
         return "Employee Number: " + empNo + ", Name: " + name + ", Sex: " + sex + ", Gross Salary: $" + grossSalary;
@@ -34,11 +49,14 @@ class Employee {
 }
 
 public class EmployeeDataManagement {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         boolean continueOperations = true;
 
         while (continueOperations) {
+
             System.out.println("Menu:");
             System.out.println("1. Create Employee Data File");
             System.out.println("2. Append Employee Data");
@@ -47,7 +65,9 @@ public class EmployeeDataManagement {
             System.out.println("5. Exit");
             System.out.print("Enter your choice (1-5): ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+
+            // Consume newline character
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -75,6 +95,9 @@ public class EmployeeDataManagement {
         scanner.close();
     }
 
+    /**
+     * Creates a new employee data file and saves employee data to it.
+    */
     private static void createEmployeeDataFile() {
         try {
             FileWriter writer = new FileWriter("EmployeeData.txt");
@@ -85,9 +108,10 @@ public class EmployeeDataManagement {
             String input = "";
 
             while (!input.equalsIgnoreCase("exit")) {
+
                 System.out.print("Employee Number: ");
                 int empNo = scanner.nextInt();
-                scanner.nextLine(); // Consume newline character
+                scanner.nextLine();
 
                 if (empNo == 0) {
                     System.out.println("Invalid employee number. Please try again.");
@@ -115,14 +139,21 @@ public class EmployeeDataManagement {
             }
 
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while creating the EmployeeData.txt file.");
             e.printStackTrace();
         }
     }
 
+    /**
+     * Appends employee data to the existing employee data file.
+    */
     private static void appendEmployeeData() {
+
         try {
+
             FileWriter writer = new FileWriter("EmployeeData.txt", true); // Append mode
 
             System.out.println("Enter employee data to append (Enter 'exit' to stop):");
@@ -131,9 +162,11 @@ public class EmployeeDataManagement {
             String input = "";
 
             while (!input.equalsIgnoreCase("exit")) {
+
                 System.out.print("Employee Number: ");
                 int empNo = scanner.nextInt();
-                scanner.nextLine(); // Consume newline character
+
+                scanner.nextLine(); 
 
                 if (empNo == 0) {
                     System.out.println("Invalid employee number. Please try again.");
@@ -145,11 +178,11 @@ public class EmployeeDataManagement {
 
                 System.out.print("Sex: ");
                 char sex = scanner.next().charAt(0);
-                scanner.nextLine(); // Consume newline character
+                scanner.nextLine(); 
 
                 System.out.print("Gross Salary: ");
                 double grossSalary = scanner.nextDouble();
-                scanner.nextLine(); // Consume newline character
+                scanner.nextLine();
 
                 Employee employee = new Employee(empNo, name, sex, grossSalary);
                 writer.write(employee.toString() + "\n");
@@ -161,15 +194,23 @@ public class EmployeeDataManagement {
             }
 
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while appending to the EmployeeData.txt file.");
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Updates the salary of an employee in the employee data file.
+    */
     private static void updateEmployeeSalary() {
+
         Scanner userInput = new Scanner(System.in);
+
         try {
+
             File inputFile = new File("EmployeeData.txt");
             File tempFile = new File("TempEmployeeData.txt");
 
@@ -178,11 +219,11 @@ public class EmployeeDataManagement {
 
             System.out.print("Enter employee number to update salary: ");
             String empNo = userInput.nextLine();
-             // Consume newline character
 
             boolean employeeFound = false;
 
             while (scanner.hasNextLine()) {
+
                 String line = scanner.nextLine();
 
                 if (line.contains("Employee Number: " + empNo)) {
@@ -196,7 +237,8 @@ public class EmployeeDataManagement {
                     employeeFound = true;
 
                     System.out.println("Employee salary updated successfully.");
-                } else {
+                } 
+                else {
                     writer.write(line + "\n");
                 }
             }
@@ -206,19 +248,28 @@ public class EmployeeDataManagement {
 
             if (!employeeFound) {
                 System.out.println("Employee with the given employee number not found.");
-            } else {
+            } 
+            else {
                 inputFile.delete();
                 tempFile.renameTo(inputFile);
             }
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while updating the EmployeeData.txt file.");
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Deletes an employee's data from the employee data file.
+    */
     private static void deleteEmployeeData() {
+
         Scanner userInput = new Scanner(System.in);
+
         try {
+
             File inputFile = new File("EmployeeData.txt");
             File tempFile = new File("TempEmployeeData.txt");
 
@@ -231,6 +282,7 @@ public class EmployeeDataManagement {
             boolean employeeFound = false;
 
             while (scanner.hasNextLine()) {
+
                 String line = scanner.nextLine();
 
                 if (line.contains("Employee Number: " + empNo)) {
@@ -241,7 +293,8 @@ public class EmployeeDataManagement {
                     employeeFound = true;
 
                     System.out.println("Employee data deleted successfully.");
-                } else {
+                } 
+                else {
                     writer.write(line + "\n");
                 }
             }
@@ -251,17 +304,24 @@ public class EmployeeDataManagement {
 
             if (!employeeFound) {
                 System.out.println("Employee with the given employee number not found.");
-            } else {
+            } 
+            else {
                 inputFile.delete();
                 tempFile.renameTo(inputFile);
             }
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while deleting employee data from the EmployeeData.txt file.");
             e.printStackTrace();
         }
     }
 
+    /**
+     * Set an employee's data from the employee object and return it.
+    */
     private static Employee parseEmployeeData(String line) {
+
         String[] parts = line.split(", ");
 
         int empNo = Integer.parseInt(parts[0].split(": ")[1]);

@@ -20,11 +20,21 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class Employee {
+
     int empno;
     String name;
     int basic;
     int grade;
 
+    /*
+     * Constructor for the Employee class.
+     * Initializes the properties of the employee.
+     *
+     * @param empno  The employee number.
+     * @param name   The name of the employee.
+     * @param basic  The basic salary of the employee.
+     * @param grade  The grade of the employee.
+    */
     public Employee(int empno, String name, int basic, int grade) {
         this.empno = empno;
         this.name = name;
@@ -34,17 +44,22 @@ class Employee {
 }
 
 public class MissingEmployeeNumbers {
+
     public static void main(String[] args) {
+
         try {
+
             File file = new File("EMPLOYEE.txt");
             Scanner scanner = new Scanner(file);
 
             int previousEmpNo = 0;
             int currentEmpNo;
+
             FileWriter writer = new FileWriter("MissingEmployeeNumbers.txt");
 
             while (scanner.hasNext()) {
 
+                // Read and process each record from the EMPLOYEE.txt file
                 String[] record = scanner.nextLine().split("\t");
                 int empno = Integer.parseInt(record[0]);
                 String name = record[1];
@@ -52,8 +67,11 @@ public class MissingEmployeeNumbers {
                 int grade = Integer.parseInt(record[3]);
 
                 currentEmpNo = empno;
-
+                
+                // Check if there are missing employee numbers between the previous and current employee numbers
                 if (currentEmpNo - previousEmpNo > 1) {
+
+                     // Write the missing employee numbers to the MissingEmployeeNumbers.txt file
                     for (int i = previousEmpNo + 1; i < currentEmpNo; i++) {
                         writer.write(String.valueOf(i) + "\n");
                     }
@@ -66,7 +84,9 @@ public class MissingEmployeeNumbers {
             writer.close();
 
             System.out.println("Missing employee numbers are saved to MissingEmployeeNumbers.txt file.");
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading the EMPLOYEE.DAT file or writing to the output file.");
             e.printStackTrace();
         }

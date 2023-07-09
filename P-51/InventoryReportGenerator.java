@@ -11,8 +11,8 @@ Part no Price Quantity  Reorder point   Minimum order
    minimum order and order amount. 
  * The order amount is calculated when the quantity on hand falls below the reorder point. 
  * It is calculated as the sum of reorder point and the minimum order less the quantity on hand. 
- * Provide a report heading such as “inventory report” captions for each column 
-   and an “end of report” message at the end of report. 
+ * Provide a report heading such as "inventory report" captions for each column 
+   and an "end of report" message at the end of report. 
  * Print the part number with leading zeroes.
 */
 
@@ -22,10 +22,13 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class InventoryReportGenerator {
+
     public static void main(String[] args) {
+
         File file = new File("inventory.txt");
 
         try {
+
             Scanner scanner = new Scanner(file);
 
             // Print report heading
@@ -43,6 +46,7 @@ public class InventoryReportGenerator {
                     "Part", "Price", "Quantity", "Reorder", "Minimum", "Order"));
 
             while (scanner.hasNextLine()) {
+
                 String line = scanner.nextLine();
                 String[] parts = line.split("\\s+");
 
@@ -53,6 +57,7 @@ public class InventoryReportGenerator {
                 int minimumOrder = Integer.parseInt(parts[4]);
 
                 int orderAmount = 0;
+
                 if (quantity < reorderPoint) {
                     orderAmount = reorderPoint + minimumOrder - quantity;
                 }
@@ -64,6 +69,7 @@ public class InventoryReportGenerator {
                 // Write inventory details to file
                 writer.write(String.format("%-6s $%.2f \t %-10d %-12d %-9d %-12d\n",
                         partNumber, price, quantity, reorderPoint, minimumOrder, orderAmount));
+
             }
 
             scanner.close();
@@ -72,7 +78,9 @@ public class InventoryReportGenerator {
             // Print end of report message
             System.out.println("----------------");
             System.out.println("End of Report");
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading the inventory file.");
             e.printStackTrace();
         }
