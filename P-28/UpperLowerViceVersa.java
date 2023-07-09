@@ -37,6 +37,7 @@ public class UpperLowerViceVersa{
 						output += (char)((int)temp+32);
 					}
 					else{
+						
 						// Keep non-alphabetic characters as they are
 						output += temp;
 					}
