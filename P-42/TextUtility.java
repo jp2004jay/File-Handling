@@ -13,8 +13,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class TextUtility {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Enter the name of the file: ");
         String fileName = scanner.nextLine();
 
@@ -28,35 +31,45 @@ public class TextUtility {
         boolean exit = false;
 
         while (!exit) {
+
             printMenu();
+
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+
+            // Consume newline character
+            scanner.nextLine(); 
 
             switch (choice) {
+
                 case 1:
                     System.out.print("Enter the name of the new file: ");
                     String newFileName = scanner.nextLine();
                     copyFile(fileName, newFileName);
                     System.out.println("File copied successfully.");
                     break;
+
                 case 2:
                     System.out.print("Enter the name of the new file: ");
                     String doubleSpacedFileName = scanner.nextLine();
                     doubleSpaceFile(fileName, doubleSpacedFileName);
                     System.out.println("File formatted to double space successfully.");
                     break;
+
                 case 3:
                     System.out.print("Enter the name of the new file: ");
                     String noBlankLinesFileName = scanner.nextLine();
                     removeBlankLines(fileName, noBlankLinesFileName);
                     System.out.println("Blank lines removed successfully.");
                     break;
+
                 case 4:
                     displayContent(fileName);
                     break;
+
                 case 5:
                     exit = true;
                     break;
+
                 default:
                     System.out.println("Invalid choice. Please try again.");
                     break;
@@ -66,7 +79,11 @@ public class TextUtility {
         scanner.close();
     }
 
+    /*
+    * Prints the menu options for the text utility.
+    */
     private static void printMenu() {
+
         System.out.println("\nText Utility Menu");
         System.out.println("1. Copy the file to a new file");
         System.out.println("2. Change the file format to double space");
@@ -76,8 +93,16 @@ public class TextUtility {
         System.out.print("Enter your choice: ");
     }
 
+    /*
+    * Copies the contents of a source file to a destination file.
+    *
+    * @param sourceFileName The name of the source file.
+    * @param destFileName   The name of the destination file.
+    */
     private static void copyFile(String sourceFileName, String destFileName) {
+
         try {
+
             File sourceFile = new File(sourceFileName);
             File destFile = new File(destFileName);
 
@@ -91,14 +116,24 @@ public class TextUtility {
 
             scanner.close();
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while copying the file.");
             e.printStackTrace();
         }
     }
 
+    /*
+    * Changes the file format to double space by adding an empty line after each line.
+    *
+    * @param sourceFileName The name of the source file.
+    * @param destFileName   The name of the destination file.
+    */
     private static void doubleSpaceFile(String sourceFileName, String destFileName) {
+
         try {
+
             File sourceFile = new File(sourceFileName);
             File destFile = new File(destFileName);
 
@@ -112,14 +147,24 @@ public class TextUtility {
 
             scanner.close();
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while formatting the file to double space.");
             e.printStackTrace();
         }
     }
 
+    /*
+    * Removes all blank lines from the file.
+    *
+    * @param sourceFileName The name of the source file.
+    * @param destFileName   The name of the destination file.
+    */
     private static void removeBlankLines(String sourceFileName, String destFileName) {
+
         try {
+
             File sourceFile = new File(sourceFileName);
             File destFile = new File(destFileName);
 
@@ -127,7 +172,9 @@ public class TextUtility {
             FileWriter writer = new FileWriter(destFile);
 
             while (scanner.hasNextLine()) {
+
                 String line = scanner.nextLine();
+
                 if (!line.trim().isEmpty()) {
                     writer.write(line + "\n");
                 }
@@ -135,18 +182,28 @@ public class TextUtility {
 
             scanner.close();
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while removing blank lines from the file.");
             e.printStackTrace();
         }
     }
 
+    /*
+    * Displays the content of the file as 60-character lines.
+    *
+    * @param fileName The name of the file to display.
+    */
     private static void displayContent(String fileName) {
+
         try {
+
             File file = new File(fileName);
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
+
                 String line = scanner.nextLine();
 
                 if (line.length() >= 60) {
@@ -156,7 +213,9 @@ public class TextUtility {
 
             scanner.close();
             System.out.println();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while displaying the file content.");
             e.printStackTrace();
         }

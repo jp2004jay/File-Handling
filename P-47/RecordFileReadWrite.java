@@ -7,12 +7,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/*
+ * The Student class represents a student with a name, roll number, and marks.
+*/
 class Student {
+
     String name;
     int rollNumber;
     double marks;
 
+    /*
+     * Constructs a Student object with the given name, roll number, and marks.
+     * @param name the name of the student
+     * @param rollNumber the roll number of the student
+     * @param marks the marks obtained by the student
+    */
     public Student(String name, int rollNumber, double marks) {
+
         this.name = name;
         this.rollNumber = rollNumber;
         this.marks = marks;
@@ -20,20 +31,25 @@ class Student {
 }
 
 public class RecordFileReadWrite {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         // Create a file to store the records
         File file = new File("student_records.txt");
 
         try {
+
             FileWriter writer = new FileWriter(file, true);
 
             // Write records to the file
             System.out.println("Enter the number of student records to enter: ");
+            
             int numRecords = scanner.nextInt();
 
             for (int i = 0; i < numRecords; i++) {
+
                 System.out.println("Enter details for student " + (i + 1) + ":");
                 System.out.print("Name: ");
                 String name = scanner.next();
@@ -48,13 +64,16 @@ public class RecordFileReadWrite {
             }
 
             writer.close();
+            
             System.out.println("Student records have been written to the file successfully.");
 
             // Read records from the file
             System.out.println("Reading student records from the file:");
+
             Scanner fileScanner = new Scanner(file);
 
             while (fileScanner.hasNextLine()) {
+
                 String line = fileScanner.nextLine();
                 String[] record = line.split(",");
 
@@ -67,7 +86,9 @@ public class RecordFileReadWrite {
             }
 
             fileScanner.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading or writing the records.");
             e.printStackTrace();
         }

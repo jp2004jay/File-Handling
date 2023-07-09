@@ -8,7 +8,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class StudentRecordWriter {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of student records to enter: ");
@@ -18,9 +20,11 @@ public class StudentRecordWriter {
         File file = new File("student_records.txt");
 
         try {
+
             FileWriter writer = new FileWriter(file);
 
             for (int i = 0; i < numRecords; i++) {
+
                 System.out.println("Enter details for student " + (i + 1) + ":");
                 System.out.print("Name: ");
                 String name = scanner.next();
@@ -42,6 +46,7 @@ public class StudentRecordWriter {
                     
                     writer.write(""+charBinary+" ");
                 }
+
                 writer.write("\n");
 
                 System.out.print("Roll number: ");
@@ -56,16 +61,27 @@ public class StudentRecordWriter {
             }
 
             writer.close();
+
             System.out.println("Student records have been written to the file successfully.");
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while writing the student records to the file.");
             e.printStackTrace();
         }
     }
-
+    
+    /*
+    * Converts a decimal integer to its binary representation.
+    *
+    * @param num The decimal integer to convert.
+    * @return The binary representation of the decimal integer.
+    */
     public static int toBinaryInt(int num){
+
         int binaryNum = 0;
         int place = 1;
+
         while(num != 0){
             int digit = num % 2;
             num = num/2;
@@ -73,6 +89,7 @@ public class StudentRecordWriter {
             binaryNum = binaryNum + (place*digit);
             place = place * 10;
         }
+        
         return binaryNum;
     }
 }

@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class TextAnalyzer {
+
     public static void main(String[] args) {
+
         String filePath = "text.txt";
 
         // Read the text file
@@ -20,25 +22,32 @@ public class TextAnalyzer {
 
         // Print the menu and perform analysis
         printMenu();
+
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
+
         switch (choice) {
+
             case 1:
                 int lineCount = countLines(fileContent);
                 System.out.println("Number of lines: " + lineCount);
                 break;
+
             case 2:
                 int wordCount = countWords(fileContent);
                 System.out.println("Number of words: " + wordCount);
                 break;
+
             case 3:
                 int charCount = countCharacters(fileContent);
                 System.out.println("Number of characters: " + charCount);
                 break;
+
             case 4:
                 int sentenceCount = countSentences(fileContent);
                 System.out.println("Number of sentences: " + sentenceCount);
                 break;
+
             case 5:
                 int totalLines = countLines(fileContent);
                 int totalWords = countWords(fileContent);
@@ -49,6 +58,7 @@ public class TextAnalyzer {
                 System.out.println("Number of characters: " + totalChars);
                 System.out.println("Number of sentences: " + totalSentences);
                 break;
+
             default:
                 System.out.println("Invalid choice!");
                 break;
@@ -58,12 +68,22 @@ public class TextAnalyzer {
 
         // Write analysis report to a file
         writeReport(filePath, fileContent);
+
         System.out.println("Analysis report written to report.txt");
     }
 
+    /*
+    * Reads the contents of a file and returns them as a string.
+    *
+    * @param filePath The path of the file to read.
+    * @return The contents of the file as a string.
+    */
     private static String readFile(String filePath) {
+
         StringBuilder content = new StringBuilder();
+
         try {
+
             File file = new File(filePath);
             Scanner scanner = new Scanner(file);
 
@@ -73,7 +93,9 @@ public class TextAnalyzer {
             }
 
             scanner.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading the file.");
             e.printStackTrace();
         }
@@ -81,7 +103,11 @@ public class TextAnalyzer {
         return content.toString();
     }
 
+    /*
+    * Prints the menu options for the text analyzer.
+    */
     private static void printMenu() {
+
         System.out.println("Text Analyzer");
         System.out.println("1. Count lines");
         System.out.println("2. Count words");
@@ -91,27 +117,63 @@ public class TextAnalyzer {
         System.out.print("Enter your choice: ");
     }
 
+    /*
+    * Counts the number of lines in the given text.
+    *
+    * @param text The text to count lines in.
+    * @return The number of lines in the text.
+    */
     private static int countLines(String text) {
+
         String[] lines = text.split("\n");
         return lines.length;
     }
 
+    /*
+    * Counts the number of words in the given text.
+    *
+    * @param text The text to count words in.
+    * @return The number of words in the text.
+    */
     private static int countWords(String text) {
+
         String[] words = text.split("\\s+");
         return words.length;
     }
 
+    /*
+    * Counts the number of characters in the given text.
+    *
+    * @param text The text to count characters in.
+    * @return The number of characters in the text.
+    */
     private static int countCharacters(String text) {
+
         return text.length();
     }
 
+    /*
+    * Counts the number of sentences in the given text.
+    *
+    * @param text The text to count sentences in.
+    * @return The number of sentences in the text.
+    */
     private static int countSentences(String text) {
+
         String[] sentences = text.split("[.!?]+");
         return sentences.length;
     }
 
+    /*
+    * Writes a report containing file information and analysis results to a report file.
+    *
+    * @param filePath     The path of the analyzed file.
+    * @param fileContent  The content of the analyzed file.
+    */
     private static void writeReport(String filePath, String fileContent) {
+
         try {
+
             File reportFile = new File("report.txt");
             FileWriter writer = new FileWriter(reportFile);
 
@@ -131,7 +193,9 @@ public class TextAnalyzer {
             writer.write("Number of sentences: " + sentenceCount + "\n");
 
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while writing the report.");
             e.printStackTrace();
         }

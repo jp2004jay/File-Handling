@@ -8,7 +8,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class RealNumberArrayIO {
+
     public static void main(String[] args) {
+
         double[] numbers = { 3.14, 2.71, 1.618, 0.577, 4.669 };
 
         // Write array to file
@@ -25,8 +27,16 @@ public class RealNumberArrayIO {
         }
     }
 
+    /*
+    * Writes an array of double numbers to a file.
+    *
+    * @param fileName The name of the file to write to.
+    * @param numbers  The array of double numbers to write.
+    */
     private static void writeArrayToFile(String fileName, double[] numbers) {
+
         try {
+
             File file = new File(fileName);
             FileWriter writer = new FileWriter(file);
 
@@ -35,16 +45,26 @@ public class RealNumberArrayIO {
             }
 
             writer.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while writing the array to file.");
             e.printStackTrace();
         }
     }
 
+    /*
+    * Reads an array of double numbers from a file.
+    *
+    * @param fileName The name of the file to read from.
+    * @return The array of double numbers read from the file.
+    */
     private static double[] readArrayFromFile(String fileName) {
+
         double[] numbers = null;
 
         try {
+
             File file = new File(fileName);
             Scanner scanner = new Scanner(file);
 
@@ -66,7 +86,9 @@ public class RealNumberArrayIO {
             }
 
             scanner.close();
-        } catch (IOException e) {
+        } 
+
+        catch (IOException e) {
             System.out.println("An error occurred while reading the array from file.");
             e.printStackTrace();
         }
